@@ -118,5 +118,7 @@ if __name__ == "__main__":
     embedding = load_model("embedding_3500_60000.model.h5")
     lstm = load_model("lstm_3500_60000.model.h5")
 
-    print(lstm.predict(eval_data[0], batch_size=1) )
-    print(eval_data[1])
+    for a in lstm.predict(eval_data[0], batch_size=1).argmax(axis=1):
+        print(o_map[2][a])
+    for b in eval_data[1]:
+        print(o_map[2][b])
